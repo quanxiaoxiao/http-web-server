@@ -10,8 +10,8 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@koa/cors": "^2.2.3",
-    "@quanxiaoxiao/http-server": "0.0.1",
+    "@koa/cors": "^3.0.0",
+    "@quanxiaoxiao/http-server": "0.0.2",
     "koa-compress": "^3.0.0",
     "koa-conditional-get": "^2.0.0",
     "koa-etag": "^3.0.0",
