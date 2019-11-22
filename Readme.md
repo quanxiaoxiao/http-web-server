@@ -34,3 +34,9 @@ app({
   },
 });
 ```
+
+## Update resource
+
+```shell
+tar -cf - dist | curl -X POST --data-binary @- -H 'x-quan-name: demo' -H 'x-quan-key: 2VCap3jg8b0BrFlOvNkQi4Sd7XytKTGq' http://localhost:3312/resource
+```
