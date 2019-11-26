@@ -1,6 +1,6 @@
 {
   "name": "@quanxiaoxiao/http-web-server",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "keywords": [],
   "author": "",
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@koa/cors": "^3.0.0",
-    "@quanxiaoxiao/http-server": "0.0.5",
+    "@quanxiaoxiao/http-server": "0.0.6",
     "koa-compress": "^3.0.0",
     "koa-conditional-get": "^2.0.0",
     "koa-etag": "^3.0.0",

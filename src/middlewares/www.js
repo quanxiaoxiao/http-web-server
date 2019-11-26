@@ -3,13 +3,13 @@ const shelljs = require('shelljs');
 const path = require('path');
 const fs = require('fs');
 
-module.exports = (resourcePath, projests) => {
+module.exports = (resourcePath, projects) => {
   if (!shelljs.test('-d', resourcePath)) {
     shelljs.mkdir('-p', resourcePath);
   }
 
   const pageList = Object
-    .entries(projests)
+    .entries(projects)
     .map(([key, value]) => {
       const pageRegList = Object
         .keys(value.pages)

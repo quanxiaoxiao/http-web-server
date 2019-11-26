@@ -3,7 +3,7 @@ const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const shelljs = require('shelljs');
 
-module.exports = (dbPathName, projests) => {
+module.exports = (dbPathName, projects) => {
   if (!shelljs.test('-d', path.dirname(dbPathName))) {
     shelljs.mkdir('-p', path.dirname(dbPathName));
   }
@@ -14,7 +14,7 @@ module.exports = (dbPathName, projests) => {
 
   db
     .defaults({
-      current: Object.keys(projests).reduce((acc, key) => ({
+      current: Object.keys(projects).reduce((acc, key) => ({
         ...acc,
         [key]: null,
       }), {}),
