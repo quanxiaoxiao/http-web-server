@@ -1,13 +1,14 @@
+const path = require('path');
 const fs = require('fs');
 
 const _ = require('lodash');
 
-module.exports = (d) => ({
+module.exports = (d, basedir) => ({
   ..._.pick(d, ['_id', 'name', 'message', 'tag', 'timeCreate']),
   list: d.list.map((fileItem) => {
-    const stats = fs.statSync(fileItem.pathname);
+    const stats = fs.statSync(path.resolve(basedir, d._id, fileItem.path));
     return {
-      pathname: fileItem.pathname.slice(d.basedir.length + 1),
+      path: fileItem.path,
       hash: fileItem.hash,
       size: stats.size,
     };

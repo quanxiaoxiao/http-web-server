@@ -21,5 +21,5 @@ module.exports = (ctx) => {
     ctx.throw(404);
   }
 
-  return pick(currentItem);
+  return pick(currentItem, ctx.resourcePath);
 };

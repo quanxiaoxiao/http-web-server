@@ -48,13 +48,12 @@ module.exports = async (ctx) => {
       message: ctx.query.message || '',
       timeCreate: now,
       tag: ctx.query.tag || null,
-      basedir: dirname,
       list: resourceList.map((filePathname) => {
         const buf = fs.readFileSync(filePathname);
         const hash = crypto.createHash('sha256');
         hash.update(buf);
         return {
-          pathname: filePathname,
+          path: filePathname.slice(dirname.length + 1),
           hash: hash.digest('hex'),
         };
       }),

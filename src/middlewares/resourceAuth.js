@@ -2,6 +2,7 @@ module.exports = ({
   projectName,
   projectKey,
   projects,
+  resourcePath,
 }) => async (ctx, next) => {
   if (/^\/resources?(?:\/?|$)/.test(ctx.path)) {
     const name = ctx.get(projectName);
@@ -13,6 +14,7 @@ module.exports = ({
       ctx.throw(401);
     }
     ctx.resourceName = name;
+    ctx.resourcePath = resourcePath;
   }
   await next();
 };

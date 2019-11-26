@@ -8,5 +8,5 @@ module.exports = (ctx) => {
       name: ctx.resourceName,
     })
     .value();
-  return list.map(pick);
+  return list.map((item) => pick(item, ctx.resourcePath));
 };

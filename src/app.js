@@ -22,13 +22,14 @@ module.exports = ({
     etag(),
     conditional(),
     compress(),
-    resourceDbMiddleware(resource.dbPathName, resource.projests),
+    resourceDbMiddleware(resource.dbPathName, resource.projects),
     resourceAuthMiddleware({
       projectName: resource.projectName,
       projectKey: resource.projectKey,
-      projests: resource.projests,
+      projects: resource.projects,
+      resourcePath: resource.resourcePath,
     }),
-    wwwMiddleware(resource.resourcePath, resource.projests),
+    wwwMiddleware(resource.resourcePath, resource.projects),
     ...middlewares,
   ],
   api: {
