@@ -17,7 +17,7 @@ app({
     projectKey: 'x-quan-key',
     resourcePath: path.resolve(__dirname, 'statics'),
     dbPathName: path.resolve(__dirname, 'db', 'index.json'),
-    projests: {
+    projects: {
       demo: {
         key: '2VCap3jg8b0BrFlOvNkQi4Sd7XytKTGq',
         pages: {
