@@ -1,17 +1,18 @@
 {
   "name": "@quanxiaoxiao/http-web-server",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "main": "src/app.js",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quanxiaoxiao/http-web-server.git"
   },
   "dependencies": {
     "@koa/cors": "^3.0.0",
-    "@quanxiaoxiao/http-server": "0.0.9",
+    "@quanxiaoxiao/http-server": "0.0.10",
     "koa-compress": "^3.0.0",
     "koa-conditional-get": "^2.0.0",
     "koa-etag": "^3.0.0",
